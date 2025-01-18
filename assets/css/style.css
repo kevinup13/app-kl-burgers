@@ -34,7 +34,7 @@ body{
 
 .logo a{
     font-family: 'Calistoga';
-    font-size: 2rem;
+    font-size: 35px;
     color: var(--text-color);
     text-decoration: none;
 }
@@ -72,6 +72,7 @@ header nav li a{
     text-decoration: none;
     transition: color 0.2s;
 }
+
 header nav li a:hover{
     color: var(--text-color-secondary);
 }
@@ -86,16 +87,17 @@ header nav .btn {
     text-decoration: none;
     font-weight: bold;
 }
+
 header nav .btn:hover{
     background-color: var(--text-color-secondary);
 
 }
+
 header .menu {
     display: none;
     flex: 1;
     justify-content: flex-end;
 }
-
 
 header .menu-icon {
     display: flex;
@@ -111,12 +113,100 @@ header .menu-icon div {
     height: 6px;
     background-color: var(--primary-color);
 }
+/* FIM HEADER */
 
+/* HERO */
+.hero {
+    display: flex;
+    align-items: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.hero .container {
+    display: flex;
+    align-items: center;
+}
+
+.hero .left-content,
+.hero .right-content {
+    flex: 1;
+}
+.hero .left-content {
+    padding-bottom:150px;
+}
+
+.hero .left-content h1 {
+    font-family: 'Calistoga';
+    letter-spacing: 1px;
+    line-height: 74px;
+    font-size: 70px;
+    margin-top: 50px;
+    color: var(--text-color);
+}
+
+.hero .left-content p {
+    font-size: 20px;
+    line-height: 26px;
+    margin: 40px 0;
+    color: var(--text-color-secondary);
+}
+
+.hero .left-content .btn {
+    display: inline-block;
+    color: var(--text-color);
+    background-color: var(--secondary-color);
+    padding: 15px 80px;
+    border-radius: 5px;
+    transition: background-color 0.2s;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.hero .left-content .btn:hover{
+    opacity: 0.8;
+}
+
+.hero .right-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero .right-content img {
+    width: auto;
+    height: 600px;
+}
+
+
+/* RESPONSIVO */
 @media (max-width: 768px) {
     header nav {
         display: none;
     }
     header .menu {
         display: flex;
+    }
+
+    /* HERO */
+    .hero .container {
+        flex-direction: column;
+    }
+    .hero .left-content {
+        text-align: center;
+        padding-bottom:40px;
+    }
+    .hero .left-content h1{
+        font-size: 40px;
+        line-height:50px;
+    }
+
+    .hero .right-content {
+        padding-bottom: 50px;
+    }
+
+    .hero .right-content img {
+        width: auto;
+        height: 350px;
     }
 }
