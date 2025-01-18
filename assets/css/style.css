@@ -13,6 +13,8 @@
     --primary-color: #FFF;
     --secondary-color: #FE6A0F;
     --background-color: #141414;
+    --background-color-secondary: #1F1F1F;
+    --background-color-tertiary: #2B2B2B;
     --text-color: #FFF;
     --text-color-secondary: #FE6A0F;
 }
@@ -177,10 +179,72 @@ header .menu-icon div {
     width: auto;
     height: 600px;
 }
+/* FIM HERO */
+
+/* SEARCH */
+.search {
+    padding: 80px 0;
+    background-color: var(--background-color-secondary);
+    margin-top: -100px;
+}
+
+.search .search-title {
+    font-size: 32px;
+    font-weight: bold;
+    color: var(--text-color);
+}
+.search .search-sides {
+    display: flex;
+    margin-top: 30px;
+    gap: 100px;
+}
+
+.search .search-left,
+.search .search-right {
+    flex: 1;
+}
+
+.search input,
+.search select {
+    width: 100%;
+    background-color: var(--background-color-tertiary);
+    color: var(--text-color);
+    font-size: 20px;
+    outline: none;
+    padding: 20px;
+    border: 0;
+    border-radius: 5px;
+
+}
+
+.search .search-left input {
+    border: none;
+    background-image: url('../images/searchIcon.png');
+    background-repeat: no-repeat;
+    background-position: 20px center;
+    padding-left: 60px;
+    border-radius: 5px;
+    color: var(--text-color);
+}
+
+ 
+.search .search-right select {
+    border: none;
+    background-color: var(--background-color-tertiary);
+    border-right: 20px solid transparent;
+    border-radius: 5px;
+    color: var(--text-color);
+} 
+
+
+
+
+
+
 
 
 /* RESPONSIVO */
-@media (max-width: 768px) {
+@media (max-width: 800px) {
     header nav {
         display: none;
     }
@@ -201,12 +265,19 @@ header .menu-icon div {
         line-height:50px;
     }
 
-    .hero .right-content {
-        padding-bottom: 50px;
-    }
-
     .hero .right-content img {
         width: auto;
         height: 350px;
+    }
+    /* SEARCH */
+    .search{
+        padding-bottom: 30px;
+    }
+    .search .search-title {
+        text-align: center;
+    }
+    .search .search-sides {
+        flex-direction: column;
+        gap: 20px;
     }
 }
