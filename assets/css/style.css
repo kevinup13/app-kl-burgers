@@ -236,11 +236,72 @@ header .menu-icon div {
     color: var(--text-color);
 } 
 
+/* PRODUCTS */
+.products-grid {
+    margin: 40px 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+.products-grid .product-item {
+    display: block;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-decoration: none;
+    position: relative;
+}
+.products-grid .product-item:hover {
+    opacity: 0.8;
+}
 
+.product-item .warning {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: var(--secondary-color);
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--text-color);
+    padding: 10px 15px;
+    border-radius: 5px;
+}
 
+.product-item .photo {
+    text-align: center;
+    background-color: var(--background-color-tertiary);
+    padding-top: 30px;
+}
+.product-item .photo img {
+    max-width: 100%;
+}
 
+.product-item .info {
+    background-color: var(--background-color-secondary);
+    padding: 60px 30px 30px 30px;
+    margin-top: -50px;
+}
 
-
+.product-item .product-category {
+    color: var(--text-color-secondary);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+.product-item .product-name {
+    color: var(--text-color);
+    font-size: 32px;
+    font-family: 'Calistoga';
+    font-weight: 500;
+    margin: 10px 0;
+}
+.product-item .product-price {
+    color: var(--secondary-color);
+    font-size: 32px;
+    font-weight: bold;
+}
 
 
 /* RESPONSIVO */
@@ -280,4 +341,14 @@ header .menu-icon div {
         flex-direction: column;
         gap: 20px;
     }
+    /* PRODUCTS */
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 600px) {
+    .products-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    
 }
