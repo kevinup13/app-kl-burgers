@@ -17,14 +17,14 @@
     --background-color-tertiary: #2B2B2B;
     --text-color: #FFF;
     --text-color-secondary: #FE6A0F;
+    --text-color-tertiary: #5F5F5F;
 }
 
 body{
     font-family: 'Inter';
     font-size: 1rem; /* fonte padrão: 1rem = 18px */
     background-color: var(--background-color);
-    color: var(--text-color);
-    
+    color: var(--text-color);  
 }
 
 .container {
@@ -193,6 +193,7 @@ header .menu-icon div {
     font-weight: bold;
     color: var(--text-color);
 }
+
 .search .search-sides {
     display: flex;
     margin-top: 30px;
@@ -227,7 +228,6 @@ header .menu-icon div {
     color: var(--text-color);
 }
 
- 
 .search .search-right select {
     border: none;
     background-color: var(--background-color-tertiary);
@@ -243,6 +243,7 @@ header .menu-icon div {
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
 }
+
 .products-grid .product-item {
     display: block;
     border-radius: 8px;
@@ -252,6 +253,7 @@ header .menu-icon div {
     text-decoration: none;
     position: relative;
 }
+
 .products-grid .product-item:hover {
     opacity: 0.8;
 }
@@ -273,6 +275,7 @@ header .menu-icon div {
     background-color: var(--background-color-tertiary);
     padding-top: 30px;
 }
+
 .product-item .photo img {
     max-width: 100%;
 }
@@ -290,6 +293,7 @@ header .menu-icon div {
     letter-spacing: 1px;
     font-weight: bold;
 }
+
 .product-item .product-name {
     color: var(--text-color);
     font-size: 32px;
@@ -297,10 +301,38 @@ header .menu-icon div {
     font-weight: 500;
     margin: 10px 0;
 }
+
 .product-item .product-price {
     color: var(--secondary-color);
     font-size: 32px;
     font-weight: bold;
+}
+
+footer {
+    background-color: var(--background-color-secondary);
+    color: var(--text-color);
+}
+
+footer .container {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    display: flex;
+    justify-content: space-between ;
+    align-items: center;
+}
+
+footer .copyright {
+    font-size: 20px;
+    color: var(--text-color-tertiary);
+}
+
+footer .copyright a {
+    color: var(--text-color-tertiary);
+    text-decoration: none;
+}
+
+footer .copyright a:hover {
+    text-decoration: underline;
 }
 
 
@@ -345,6 +377,13 @@ header .menu-icon div {
     .products-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+    /* FOOTER */
+    footer .container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+
 }
 @media (max-width: 600px) {
     .products-grid {
